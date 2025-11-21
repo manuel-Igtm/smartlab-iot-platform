@@ -1,0 +1,35 @@
+.
+├── backend
+│   ├── apps
+│   │   ├── alerts
+│   │   ├── devices
+│   │   ├── sensors
+│   │   └── users
+│   ├── config
+│   ├── media
+│   └── static
+├── CONTRIBUTING.md
+├── docs
+│   ├── adr
+│   │   ├── 001-use-django-rest-framework.md
+│   │   └── README.md
+│   ├── api
+│   ├── architecture
+│   ├── CTO-ACTION-PLAN.md
+│   ├── deployment
+│   ├── LEARNING_REFLECTION_TEMPLATE.md
+│   └── PROJECT_STRUCTURE.txt
+├── embedded
+│   ├── esp32
+│   └── stm32
+├── infrastructure
+│   ├── docker
+│   ├── kubernetes
+│   └── terraform
+├── LICENSE
+├── README.md
+├── scripts
+│   └── setup-github.sh
+└── tests
+
+24 directories, 9 files
