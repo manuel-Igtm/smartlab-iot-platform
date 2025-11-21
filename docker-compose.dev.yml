@@ -1,0 +1,29 @@
+# Development override for docker-compose
+# Copy this to docker-compose.override.yml and customize
+
+version: '3.9'
+
+services:
+  api:
+    # Enable hot reload for development
+    volumes:
+      - ./backend:/app/backend
+    environment:
+      - DEBUG=True
+      - DJANGO_SETTINGS_MODULE=config.settings
+    command: sh -c "python manage.py migrate && python manage.py runserver 0.0.0.0:8000"
+
+  postgres:
+    # Expose PostgreSQL port for local development tools
+    ports:
+      - "5432:5432"
+
+  redis:
+    # Expose Redis port for local development tools
+    ports:
+      - "6379:6379"
+
+  mqtt:
+    # Enable verbose logging for development
+    environment:
+      - MOSQUITTO_LOG_LEVEL=debug
